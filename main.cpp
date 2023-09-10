@@ -146,10 +146,10 @@ void render_voranoi(){
     for (int i = 0; i < HEIGHT; i++) {
         for (int j = 0; j < WIDTH; j++) {
             int closest_seed_index = 0;
-            int min_distance = sqr_distance(seeds[0].x, seeds[0].y, j, i);
+            int min_distance = manhattan_distance(seeds[0].x, seeds[0].y, j, i);
 
             for (size_t k = 1; k < SEEDS_COUNT; k++) {
-                int current_distance = sqr_distance(seeds[k].x, seeds[k].y, j, i);
+                int current_distance = manhattan_distance(seeds[k].x, seeds[k].y, j, i);
                 if (current_distance < min_distance) {
                     closest_seed_index = k;
                     min_distance = current_distance;
@@ -162,7 +162,7 @@ void render_voranoi(){
 }
 
 void ppm_to_png(){
-    system("ffmpeg -i output.ppm output.png");
+    system("ffmpeg -i output.ppm output2.png");
 
 }
 
