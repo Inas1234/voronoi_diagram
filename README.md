@@ -1,17 +1,9 @@
 # Voronoi diagram generation in c++
 
-# ================================
+## Requirements
 
-#
+### \* ffmpeg
 
-# Requirements
+## Use
 
-# ------------
-
-# \* ffmpeg
-
-# Use
-
-# ---
-
-# \* `./main.exe` to run the program
+### \* `./main.exe` to run the program
